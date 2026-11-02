@@ -7,7 +7,12 @@ import os
 app = Flask(__name__, static_folder="frontend")
 CORS(app)
 
-saved = joblib.load("best_sentiment_model.joblib")
+#saved = joblib.load("best_sentiment_model.joblib")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+saved = joblib.load(
+    os.path.join(BASE_DIR, "best_sentiment_model.joblib")
+)
 model = saved["model"]
 vectorizer = saved["vectorizer"]
 

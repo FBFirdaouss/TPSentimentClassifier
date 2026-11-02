@@ -1,8 +1,20 @@
+# Environnement virtuel
 venv/
+.venv/
+
+# Python
 __pycache__/
-*.pyc
-.pytest_cache/
-.idea/
+*.py[cod]
+
+# IDE
 .vscode/
-dataset/
+.idea/
+
+# Variables sensibles
+.env
+
+# Logs
+*.log
+
+# Gros modèle non utilisé pour le déploiement
 sentiment_models.joblib
